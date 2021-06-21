@@ -39,28 +39,34 @@
                         <i class="feather icon-user-plus auth-icon"></i>
                     </div>
                     <h3 class="mb-4">Sign up</h3>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Username">
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="email" class="form-control" placeholder="Email">
-                    </div>
-                    <div class="input-group mb-4">
-                        <input type="password" class="form-control" placeholder="password">
-                    </div>
-                    <div class="form-group text-left">
-                        <div class="checkbox checkbox-fill d-inline">
-                            <input type="checkbox" name="checkbox-fill-1" id="checkbox-fill-1" checked="">
-                            <label for="checkbox-fill-1" class="cr"> Save Details</label>
-                        </div>
-                    </div>
-                    <div class="form-group text-left">
-                        <div class="checkbox checkbox-fill d-inline">
-                            <input type="checkbox" name="checkbox-fill-2" id="checkbox-fill-2">
-                            <label for="checkbox-fill-2" class="cr">Send me the <a href="#!"> Newsletter</a> weekly.</label>
-                        </div>
-                    </div>
-                    <button class="btn btn-primary shadow-2 mb-4">Sign up</button>
+                    <form action="/create" method="post">
+	                    <div class="input-group mb-3">
+	                        <input type="text" class="form-control" placeholder="Full Name" name="Name">
+	                    </div>
+	                    <div class="input-group mb-3">
+	                        <input type="email" class="form-control" placeholder="Email" name="Email">
+	                    </div>
+	                    <div class="input-group mb-3">
+	                        <input type="text" class="form-control" placeholder="Phone" name = "Phone" >
+	                    </div>
+	                    <div class="input-group mb-3">
+	                        <input type="text" class="form-control" placeholder="Username" name="Username">
+	                    </div>
+	                    <div class="input-group mb-4">
+	                        <input type="password" class="form-control" placeholder="Password" name ="Password">
+	                    </div>
+	                    <div class="input-group mb-4">
+	                        <input type="password" class="form-control" placeholder="Re-Password" name ="">
+	                    </div>
+	                    <div class="input-group mb-4">
+	                        <select class="form-control" name="Role" id="">
+	                        	<option value="0">Choose Role</option>
+	                        	<option value="Admin">Admin</option>
+	                        	<option value="Member">Member</option>
+	                        </select>
+	                    </div>
+	                    <button class="btn btn-primary shadow-2 mb-4">Sign up</button>
+                    </form>
                     <p class="mb-0 text-muted">Allready have an account? <a href="/Login"> Log in</a></p>
                 </div>
             </div>
