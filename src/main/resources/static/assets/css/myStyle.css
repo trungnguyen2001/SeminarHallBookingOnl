@@ -75,6 +75,9 @@
  .card-img-top{
  	height:300px;
  }
+ .card{
+ padding:0!important;
+ }
 .card ul {
 	position: relative;
 	display: inline-flex;
@@ -86,6 +89,11 @@
 	list-style: none;
 	padding: 0 5px;
 	
+}
+.card-img-overlay{
+	top:50%!important;;
+	left:50%!important;
+	transform:translate(-50%,-50%);
 }
 .amenities ul li{
 	list-style: none;

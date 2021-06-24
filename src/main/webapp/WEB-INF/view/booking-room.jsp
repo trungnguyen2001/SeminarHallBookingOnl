@@ -39,8 +39,8 @@
 						<h1>The Online Seminar Hall and Auditorium Booking</h1>
 						<p>Some representative placeholder content for the first
 							slide.</p>
-						<a href="/booking-room" class="btn btn-outline-primary">Book Now <i
-							class="bi bi-arrow-right"></i>
+						<a href="/booking-room" class="btn btn-outline-primary">Book
+							Now <i class="bi bi-arrow-right"></i>
 						</a>
 					</div>
 				</div>
@@ -52,8 +52,8 @@
 						<h1>The Online Seminar Hall and Auditorium Booking</h1>
 						<p>Some representative placeholder content for the first
 							slide.</p>
-						<a href="/booking-room" class="btn btn-outline-primary">Book Now <i
-							class="bi bi-arrow-right"></i>
+						<a href="/booking-room" class="btn btn-outline-primary">Book
+							Now <i class="bi bi-arrow-right"></i>
 						</a>
 					</div>
 				</div>
@@ -65,8 +65,8 @@
 						<h1>The Online Seminar Hall and Auditorium Booking</h1>
 						<p>Some representative placeholder content for the first
 							slide.</p>
-						<a href="/booking-room" class="btn btn-outline-primary">Book Now <i
-							class="bi bi-arrow-right"></i>
+						<a href="/booking-room" class="btn btn-outline-primary">Book
+							Now <i class="bi bi-arrow-right"></i>
 						</a>
 					</div>
 				</div>
@@ -160,9 +160,33 @@
 							style="color: red">*</span></label>
 					</div>
 				</div>
+
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="card text-white">
+				<img src="/assets/images/Website/slide1.jpg	" class="card-img" alt="...">
+				<div class="bg"></div>
+				<div class="card-img-overlay text-center">
+				
+					<h1 class="card-title"> Room A </h1>
+					<p class="card-text">This is a longer card with supporting
+							text below as a natural lead-in to additional content. This
+							content is a little bit longer.</p>
+						<ul>
+							<li><i class="bi bi-shield-fill-check"></i></li>
+							<li><i class="bi bi-camera-reels-fill"></i></li>
+							<li><i class="bi bi-wifi"></i></li>
+							<li><i class="bi bi-person-fill"></i> 500 persons</li>
+						</ul>
+				</div>
 			</div>
 		</div>
+		<div class="row col-2 col-md" style="padding:15px;">
 		<button class="btn btn-primary">Submit</button>
+		</div>
+		
 	</div>
 
 	<section id="footer">
