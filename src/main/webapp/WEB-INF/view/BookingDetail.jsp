@@ -50,7 +50,7 @@
 													<div class="form-group">
 														<label for="text">From Date</label> <input type="text"
 															class="form-control" disabled
-															value="${booking.FromDateDisplay()}">
+															value="${booking.from_date}">
 													</div>
 													<div class="form-group">
 														<label for="text">Session</label> <input type="text"
@@ -66,12 +66,12 @@
 													<div class="form-group">
 														<label for="approval">Approval Date</label> <input
 															type="text" class="form-control" disabled
-															value="${booking.ApprovalDateDisplay() }">
+															value="${booking.approval_date}">
 													</div>
 													<div class="form-group">
 														<label for="text">To Date</label> <input type="text"
 															class="form-control" disabled
-															value="${booking.ToDateDisplay()}">
+															value="${booking.to_date}">
 													</div>
 													<div class="form-group">
 														<label for="text">Seminar Hall</label> <input type="text"

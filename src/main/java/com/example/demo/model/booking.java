@@ -7,12 +7,16 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.format.annotation.DateTimeFormat;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonFormat.Shape;
 
 
 @Entity
@@ -21,9 +25,9 @@ import org.springframework.format.annotation.DateTimeFormat;
 public class booking {
 	private int id;
 	@DateTimeFormat(pattern="yyyy.MM.dd")
-	private Date from_date;
+	private String from_date;
 	@DateTimeFormat(pattern = "dd-MM-yyyy")
-	private Date to_date;
+	private String to_date;
 	private String session;
 	private Date approval_date;
 	private String full_name;
@@ -113,30 +117,29 @@ public class booking {
 	public void setSession(String session) {
 		this.session = session;
 	}
-
-
+	@JsonFormat(pattern = "yyyy-MM-dd",shape = Shape.STRING )
 	@Column(name = "to_date", nullable = true)
-	public Date getTo_date() {
+	public String getTo_date() {
 		return to_date;
 	}
 
-	public void setTo_date(Date to_date) {
+	public void setTo_date(String to_date) {
 		this.to_date = to_date;
 	}
-
-	@DateTimeFormat(pattern="yyyy.MM.dd")
+	@JsonFormat(pattern = "yyyy-MM-dd",shape = Shape.STRING )
+	/* @DateTimeFormat(pattern="yyyy.MM.dd") */
 	@Column(name = "from_date", nullable = true)
-	public Date getFrom_date() {
+	public String getFrom_date() {
 		return from_date;
 	}
 
-	public void setFrom_date(Date from_date) {
+	public void setFrom_date(String from_date) {
 		this.from_date = from_date;
 	}
 
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public int getId() {
 		return id;
 	}
@@ -145,7 +148,7 @@ public class booking {
 		this.id = id;
 	}
 	//create display date 
-	@Column(name = "from_date", nullable = true,insertable = false,updatable=false)
+	@Column(name = "from_date", nullable = true,insertable = true,updatable=false)
 	public String FromDateDisplay() {
 		 SimpleDateFormat formatter = new SimpleDateFormat("dd MMM yyyy");
 	      String strDate = formatter.format(from_date);

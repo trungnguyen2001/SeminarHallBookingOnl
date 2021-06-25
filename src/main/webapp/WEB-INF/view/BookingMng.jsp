@@ -49,7 +49,7 @@
 															<td>
 																<h6 class="text-muted">
 																	<i class="fas fa-circle text-c-green f-10 m-r-15"></i>
-																	${item.FromDateDisplay()} to ${item.ToDateDisplay()}
+																	${item.from_date} to ${item.to_date}
 																</h6>
 															</td>
 															<td><c:if test="${item.status eq false}">
@@ -60,8 +60,9 @@
 																</c:if> <c:if test="${item.status eq true}">
 																	<a href="/BookingDetail?id=${item.id}"
 																		class="label theme-bg2 text-white">Detail</a>
-																	<a href="/BookingReject?id=${item.id}"
-																		class="label theme-bg text-white">Reject</a>
+																	 <a href="/BookingReject?id=${item.id}"
+																					class="label theme-bg text-white">Reject</a>
+																					
 																</c:if> <c:if test="${empty item.status}">
 																	<a href="/BookingApprove?id=${item.id}"
 																		class="label theme-bg2 text-white">Approve</a>
@@ -72,7 +73,6 @@
 																</c:if></td>
 														</tr>
 													</c:forEach>
-
 												</tbody>
 											</table>
 										</div>

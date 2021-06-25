@@ -63,6 +63,11 @@
 						class="nav-item active"><a href="/BookingCreate?id=${acc.id}"
 						class="nav-link "><span class="pcoded-micon"><i
 								class="feather icon-home"></i></span><span class="pcoded-mtext">Booking</span></a></li>
+								<li
+						data-username="dashboard Default Ecommerce CRM Analytics Crypto Project"
+						class="nav-item active"><a href="/BookingMngUser?id=${id_book.id}"
+						class="nav-link "><span class="pcoded-micon"><i
+								class="feather icon-home"></i></span><span class="pcoded-mtext">Booking User</span></a></li>
 				</ul>
 			</div>
 		</div>

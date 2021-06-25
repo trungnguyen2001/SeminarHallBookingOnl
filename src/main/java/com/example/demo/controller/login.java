@@ -2,13 +2,17 @@ package com.example.demo.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.example.demo.model.account;
+import com.example.demo.model.booking;
 import com.example.demo.repository.accountRepository;
+import com.example.demo.repository.bookingRepository;
 import com.example.demo.util.Mappings;
 import com.example.demo.util.ViewNames;
 
@@ -16,7 +20,8 @@ import com.example.demo.util.ViewNames;
 public class login {
 	@Autowired
 	private accountRepository account_rep;
-
+	@Autowired
+	private bookingRepository bkrep;
 	@RequestMapping(Mappings.LOGIN)
 	public String Index() {
 
@@ -24,7 +29,7 @@ public class login {
 	}
 
 	@RequestMapping(value = "/signin", method = RequestMethod.POST)
-	public String signin(account newacc) {
+	public String signin(account newacc, HttpSession session) {
 		List<account> acc = account_rep.findAll();
 		for (int i = 0; i < acc.size(); i++) {
 			String username = newacc.getUsername();
@@ -44,6 +49,9 @@ public class login {
 						}
 					} else if (acc.get(i).getRole().equals("User")) {
 						{
+							session.setAttribute("user", username);
+							
+							
 							return "redirect:" + Mappings.HOMEPAGE_USER+"?id="+acc.get(i).getId();
 						}
 					}

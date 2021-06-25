@@ -162,25 +162,27 @@
 										<h5>Booking Detail</h5>
 									</div>
 									<div class="card-body">
-										<form action="upload" method="post" enctype="multipart/form-data">
+										<form action="/addbook" method="post" enctype="multipart/form-data">
+										<h1 th:text="$(seesion.User)"></h1>
 											<div class="row">
 												<div class="col-md-6">
 													<div class="form-group">
 															<label for="serminal">Serminal Hall</label> 
 															<select class="form-control" name="id_serminal_hall">
 																	<c:forEach var="item" items="${hall}" varStatus="loop">
-																	<option value="${item.id}">${item.name}</option>
+																	<option>${item.name}</option>
 																	</c:forEach>
 															</select>
 														</div>
+													<div class="form-group" style="display:none;">
+														<label>Full Name</label> <input type="text"
+															class="form-control" value="${seesion.User}" name="full_name">
+													</div>
 													<div class="form-group">
 														<label for="from_date">Start Date</label> <input type="date"
 															class="form-control" placeholder="Enter Start Date" name="from_date">
 													</div>
-													<div class="form-group">
-														<label for="upload">Choose files</label>
-														<input type="file" id="upload" name="file" />
-													</div>												
+																								
 												</div>
 												<div class="col-md-6">
 													<div class="form-group">
